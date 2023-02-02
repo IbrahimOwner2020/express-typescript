@@ -1,6 +1,6 @@
 import express, { Application, NextFunction, Request, Response } from "express";
 import dotenv from "dotenv";
-import { errorHander, CustomError } from "./middlewares/errorHandler";
+// import { errorHander, CustomError } from "./middlewares/errorHandler";
 
 dotenv.config();
 
@@ -23,7 +23,7 @@ app.use("*", (req: Request, res: Response, next: NextFunction) => {
 });
 
 // error handler
-app.use(errorHander);
+// app.use(errorHander);
 
 app.listen(port, () => {
 	console.log(`Server running on port ${port}`);

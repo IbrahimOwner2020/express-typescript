@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const dotenv_1 = __importDefault(require("dotenv"));
-const errorHandler_1 = require("./middlewares/errorHandler");
+// import { errorHander, CustomError } from "./middlewares/errorHandler";
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const port = process.env.PORT || 3000;
@@ -22,7 +22,7 @@ app.use("*", (req, res, next) => {
     });
 });
 // error handler
-app.use(errorHandler_1.errorHander);
+// app.use(errorHander);
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
